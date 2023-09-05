@@ -10,5 +10,5 @@ The Cities data set contains hypothetical data on 174 U.S. cities. The following
 
 # Analysis 
 * I specify a multiple regression model in which CRIME (DV) is regressed on SIZE and POV.
-* I investigatewhether the effect of poverty on crime is magnified in big cities. To test this hypothesis, it is necessary to compute a new variable that is the product of POV and SIZE.
+* I investigate whether the effect of poverty on crime is magnified in big cities. To test this hypothesis, it is necessary to compute a new variable that is the product of POV and SIZE.
 
