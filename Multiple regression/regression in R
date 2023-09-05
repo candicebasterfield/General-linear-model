@@ -1,1 +1,24 @@
+### Multiple regression ###
+
+#### Load libraries ####
+
+library(psych)
+library(lmSupport)
+library(car)
+library(dplyr)
+
+## Load data 
+cities<-read.csv("cities_data_set.csv")
+
+## re-coding variables
+cities$CRIME_trans<-cities$CRIME * 1000
+cities$size_trans<-cities$size * 10000
+
+# Multiple regression
+Model1 <- lm(CRIME_trans~ 1+ size_trans+POV, data=cities)
+mcSummary(Model1)
+
+# Regression (interaction)
+Model2 <- lm(CRIME_trans~ 1+ size_trans+POV+size_trans:POV, data=cities)
+mcSummary(Model2)
 
